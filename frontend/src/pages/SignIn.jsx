@@ -7,7 +7,6 @@ import {Link, useNavigate, useParams, useSearchParams} from 'react-router-dom'
 import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 
 import OAuth from '../components/OAuth'
-import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
 import { collectionGroup } from 'firebase/firestore'
 
@@ -36,8 +35,6 @@ function SignIn() {
 	// Sign in the user
 	const onSubmit = async (e) => {
 		e.preventDefault()
-
-		// console.log(`/category/${searchParams.get('type')}/${searchParams.get('location')}`)
 
 		try {
 			
@@ -73,8 +70,6 @@ function SignIn() {
 		if (role === "seller") userData = sellerConfig
 		if (role === "renter") userData = renterConfig
 
-		console.log(`onDemoLogin [${role}] => email: ${userData.email}   password: ${userData.password}`)
-
 		try {
 			
 			const auth = getAuth()
@@ -82,7 +77,6 @@ function SignIn() {
 			const userCredential = await signInWithEmailAndPassword(auth, userData.email, userData.password)
 	
 			if (userCredential.user) {
-				console.log(`userCredentials`, userCredential.user.uid)
 				if (searchParams.get('location')) {
 					navigate(`/category/${searchParams.get('type')}/${searchParams.get('location')}`)
 				} else {
@@ -115,10 +109,6 @@ function SignIn() {
 						<img src={visibilityIcon} alt="Show Password" className='showPassword' onClick={() => setShowPassword((prevState) => !prevState)} />
 					</div>
 
-					{/* <Link to='/forgot-password' className='forgotPasswordLink'>
-						Forgot Password
-					</Link> */}
-
 					<button type='submit' className='primaryButton'>
 						Sign In
 					</button>
@@ -130,15 +120,6 @@ function SignIn() {
 						Forgot Password
 					</Link>
 
-
-					{/* <div className="signInBar">
-						<div className="signInText">
-							Sign In
-						</div>
-						<button className="signInButton">
-							<ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
-						</button>
-					</div> */}
 				</form>
 
 				<OAuth />
