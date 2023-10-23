@@ -174,7 +174,7 @@ To get a local copy up and running, follow these simple steps.
 	- Create `listings`, `users`, and `backup` collections.
 	- Create the following indexes:
 		![indexes]
-	- If you want to create an `admin` account, add a `role: "admin` field to a user.
+	- If you want to create an `admin` account, add a `role: "admin"` field to a user.
 		
 2. Create a Firebase private key.
 	- In your project's `Project Settings`, select `Service Accounts`.
@@ -207,7 +207,7 @@ To get a local copy up and running, follow these simple steps.
 	- Here you can set the login details for the demo accounts after you have created them.
 	- You'll need to put in your Google Cloud API key for `REACT_APP_GEOCODE_API_KEY`.
 	- You'll also need to put in your Firebase project details for `REACT_APP_FIREBASE_CONFIG`.
-	- These can be found by logging into [Firebase Console](https://console.firebase.google.com/), selecting your project, then selecting 'Project Settings' from the cog icon next to 'Project Overview' in the top left of the screen.
+	- These can be found by logging into [Firebase Console](https://console.firebase.google.com/), selecting your project, then selecting `Project Settings` from the cog icon next to `Project Overview` in the top left of the screen.
 	- Scroll down and grab the `firebaseConfig` object, converting it to JSON (by putting the keys in quotation marks, i.e., `{"apiKey": "1234", "authDomain": "www.firebaseapp.com", etc.}`) before you paste it into the `frontendenv.example` file.
 
 4. Rename `backendenv.example` and `frontendenv.example` files to `.env`.
