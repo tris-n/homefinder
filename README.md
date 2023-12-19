@@ -262,6 +262,11 @@ Create an account at [https://www.homefinder-app.com/sign-up](https://www.homefi
 
 ![register]
 
+### Live Demo
+If you just want to demo the site without creating an account, you can click on one of the four role demos at [https://www.homefinder-app.com/sign-in](https://www.homefinder-app.com/sign-in).
+
+![demo]
+
 ### Your Profile
 This is where you can manage your listed properties, and view your current bids and successful purchases. It will also show you if you have any unread messages.
 
@@ -371,6 +376,7 @@ Project Link: [https://github.com/tris-n/homefinder](https://github.com/tris-n/h
 
 <!-- Screenshots -->
 [register]: readme/images/register.jpg
+[demo]: readme/images/demo.jpg
 [explore]: readme/images/explore.jpg
 [indexes]: readme/images/indexes.jpg
 
